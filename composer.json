@@ -1,0 +1,16 @@
+{
+    "name": "cowboy/suitup2",
+    "description": "Suitup 2.0",
+    "type": "project",
+    "require": {
+        "braghim-sistemas/suitup-php": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco A.",
+            "email": "marco.a.braghim@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
