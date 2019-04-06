@@ -3,7 +3,10 @@
     "description": "Suitup 2.0",
     "type": "project",
     "require": {
-        "braghim-sistemas/suitup-php": "dev-master"
+				"php": ">=7.2",
+        "braghim-sistemas/suitup-php": "dev-version2.0",
+        "phpunit/phpunit": "^8.0",
+        "php-coveralls/php-coveralls": "^v2"
     },
     "license": "MIT",
     "authors": [
