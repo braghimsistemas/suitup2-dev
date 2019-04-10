@@ -30,10 +30,11 @@ if (file_exists('/app/vendor/autoload.php')) {
 }
 
 // Para rodar o framework bastam essas duas linhas.
-$mvc = new SuitupStart('modules');
+$suitup = new SuitupStart('modules');
+$suitup->getConfig()->setLogsPath('var/log/');
 
 // Caso queira monitorar as consultas SQL
 // Cuidado para não deixar habilitado em ambiente de produção
-$mvc->setSqlMonitor(DEVELOPMENT);
+$suitup->setSqlMonitor(DEVELOPMENT);
 
-$mvc->run();
+$suitup->run();
