@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/braghimsistemas/suitup-php.git",
-                "reference": "f409c945d1e956d8a4a45033afbe95007d6d3387"
+                "reference": "703c7becd7528f1ff31b27e6ba0a73e529d4e986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/braghimsistemas/suitup-php/zipball/f409c945d1e956d8a4a45033afbe95007d6d3387",
-                "reference": "f409c945d1e956d8a4a45033afbe95007d6d3387",
+                "url": "https://api.github.com/repos/braghimsistemas/suitup-php/zipball/703c7becd7528f1ff31b27e6ba0a73e529d4e986",
+                "reference": "703c7becd7528f1ff31b27e6ba0a73e529d4e986",
                 "shasum": ""
             },
             "require": {
@@ -63,7 +63,7 @@
                 "thizer",
                 "webapp"
             ],
-            "time": "2019-04-06T15:37:47+00:00"
+            "time": "2019-04-06T22:15:41+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -2055,12 +2055,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "5952489bf40a486e2fa9ca303727f59e1d761cef"
+                "reference": "93d8bd2aa30c6f0614e155dec377c3503b9cba7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/5952489bf40a486e2fa9ca303727f59e1d761cef",
-                "reference": "5952489bf40a486e2fa9ca303727f59e1d761cef",
+                "url": "https://api.github.com/repos/symfony/console/zipball/93d8bd2aa30c6f0614e155dec377c3503b9cba7b",
+                "reference": "93d8bd2aa30c6f0614e155dec377c3503b9cba7b",
                 "shasum": ""
             },
             "require": {
@@ -2122,7 +2122,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-06T14:04:46+00:00"
+            "time": "2019-04-06T16:39:17+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -2130,12 +2130,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/contracts.git",
-                "reference": "a4b5e697e24544ddeaf9f9255cdda6e4c2c32659"
+                "reference": "2ae87c20fb85e5f71af65adfe39cde9e09a72ed2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/a4b5e697e24544ddeaf9f9255cdda6e4c2c32659",
-                "reference": "a4b5e697e24544ddeaf9f9255cdda6e4c2c32659",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/2ae87c20fb85e5f71af65adfe39cde9e09a72ed2",
+                "reference": "2ae87c20fb85e5f71af65adfe39cde9e09a72ed2",
                 "shasum": ""
             },
             "require": {
@@ -2193,7 +2193,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-04-03T09:22:57+00:00"
+            "time": "2019-04-07T08:26:05+00:00"
         },
         {
             "name": "symfony/filesystem",
