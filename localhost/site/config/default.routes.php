@@ -7,7 +7,7 @@
 
 return array(
   array(
-    'type' => \Suitup\Router\Routes::TYPE_LITERAL,
+    'type' => \Suitup\Storage\Routes::TYPE_LITERAL,
     'controller' => 'album',
     'action' => 'adicionar',
     'url_list' => function() {
@@ -21,7 +21,7 @@ return array(
     'params' => array()
   ),
   'album-detalhe' => array(
-    'type' => \Suitup\Router\Routes::TYPE_LINEAR,
+    'type' => \Suitup\Storage\Routes::TYPE_LINEAR,
     'controller' => 'album',
     'action' => 'index',
     'params' => array(
@@ -29,7 +29,7 @@ return array(
     )
   ),
   'album-editar.html' => array(
-    'type' => \Suitup\Router\Routes::TYPE_REVERSE,
+    'type' => \Suitup\Storage\Routes::TYPE_REVERSE,
     'controller' => 'album',
     'action' => 'editar',
     'params' => array(
