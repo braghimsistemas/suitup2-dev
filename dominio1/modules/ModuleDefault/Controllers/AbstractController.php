@@ -1,7 +1,7 @@
 <?php
 namespace ModuleDefault\Controllers;
 
-use SuitUp\Mvc\MvcAbstractController;
+use Suitup\Mvc\MvcAbstractController;
 
 class AbstractController extends MvcAbstractController
 {
