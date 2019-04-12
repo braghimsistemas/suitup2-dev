@@ -6,35 +6,36 @@
 // http://localhost:8080/site/album-detalhe/1325.html
 
 return array(
-  array(
-    'type' => \Suitup\Mvc\Routes::TYPE_LITERAL,
-    'controller' => 'album',
-    'action' => 'adicionar',
-    'url_list' => function() {
-      return array(
-        'album-adicionar.html',
-        'album-adicionar',
-        'albun-adicionar.html',
-        'albun-adicionar',
-      );
-    },
-    'params' => array()
-  ),
   'album-detalhe' => array(
     'type' => \Suitup\Mvc\Routes::TYPE_LINEAR,
     'controller' => 'album',
     'action' => 'index',
     'params' => array(
-      'id' => '/\D+/'
+      'id' => '', // '/\D+/' --> If only numbers
+      'name' => '/(\.html)$/'
     )
   ),
-  'album-editar.html' => array(
-    'type' => \Suitup\Mvc\Routes::TYPE_REVERSE,
-    'controller' => 'album',
-    'action' => 'editar',
-    'params' => array(
-      'id' => 0,
-      'criar'
-    )
-  )
+  // array(
+  //   'type' => \Suitup\Mvc\Routes::TYPE_LITERAL,
+  //   'controller' => 'album',
+  //   'action' => 'adicionar',
+  //   'url_list' => function() {
+  //     return array(
+  //       'album-adicionar.html',
+  //       'album-adicionar',
+  //       'albun-adicionar.html',
+  //       'albun-adicionar',
+  //     );
+  //   },
+  //   'params' => array()
+  // ),
+  // 'album-editar.html' => array(
+  //   'type' => \Suitup\Mvc\Routes::TYPE_REVERSE,
+  //   'controller' => 'album',
+  //   'action' => 'editar',
+  //   'params' => array(
+  //     'id' => 0,
+  //     'criar'
+  //   )
+  // ),
 );
