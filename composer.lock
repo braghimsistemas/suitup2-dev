@@ -12,17 +12,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/braghimsistemas/suitup-php.git",
-                "reference": "703c7becd7528f1ff31b27e6ba0a73e529d4e986"
+                "reference": "f444c97ebcaef300011fa229a336e402baf47895"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/braghimsistemas/suitup-php/zipball/703c7becd7528f1ff31b27e6ba0a73e529d4e986",
-                "reference": "703c7becd7528f1ff31b27e6ba0a73e529d4e986",
+                "url": "https://api.github.com/repos/braghimsistemas/suitup-php/zipball/f444c97ebcaef300011fa229a336e402baf47895",
+                "reference": "f444c97ebcaef300011fa229a336e402baf47895",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "matthiasmullie/minify": "^1",
                 "php": ">=7.2",
+                "verot/class.upload.php": "dev-master",
                 "zendframework/zend-uri": "^2",
                 "zendframework/zend-validator": "^2"
             },
@@ -31,8 +33,7 @@
                 "phpunit/phpunit": "^8.0"
             },
             "suggest": {
-                "phpmailer/phpmailer": "Not implemented in framework itself, but helps a lot and it's very simple.",
-                "verot/class.upload.php": "If you need to manage files upload"
+                "phpmailer/phpmailer": "Not implemented in framework itself, but helps a lot and it's very simple."
             },
             "type": "library",
             "autoload": {
@@ -63,7 +64,7 @@
                 "thizer",
                 "webapp"
             ],
-            "time": "2019-04-06T22:15:41+00:00"
+            "time": "2019-04-12T05:03:59+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -455,12 +456,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8"
+                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
-                "reference": "3e01bdad3e18354c3dce54466b7fbe33a9f9f7f8",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
+                "reference": "e6828efaba2c9b79f4499dae1d66ef8bfa7b2b72",
                 "shasum": ""
             },
             "require": {
@@ -495,7 +496,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-06-11T23:09:50+00:00"
+            "time": "2019-04-07T13:18:21+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -1155,12 +1156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "42f63b2c42b59053ce7de1848da09d7c79ec7e63"
+                "reference": "893a342763f454e029579b6a5175cd8c4a408168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/42f63b2c42b59053ce7de1848da09d7c79ec7e63",
-                "reference": "42f63b2c42b59053ce7de1848da09d7c79ec7e63",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/893a342763f454e029579b6a5175cd8c4a408168",
+                "reference": "893a342763f454e029579b6a5175cd8c4a408168",
                 "shasum": ""
             },
             "require": {
@@ -1229,7 +1230,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-04-05T10:27:58+00:00"
+            "time": "2019-04-08T16:09:04+00:00"
         },
         {
             "name": "psr/container",
@@ -1992,12 +1993,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "60be0fae658797d79708e8bd5f2ad2b0cc9f6191"
+                "reference": "ce7d0c7ac1e2f9115fd729e6cacf9893d4d73192"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/60be0fae658797d79708e8bd5f2ad2b0cc9f6191",
-                "reference": "60be0fae658797d79708e8bd5f2ad2b0cc9f6191",
+                "url": "https://api.github.com/repos/symfony/config/zipball/ce7d0c7ac1e2f9115fd729e6cacf9893d4d73192",
+                "reference": "ce7d0c7ac1e2f9115fd729e6cacf9893d4d73192",
                 "shasum": ""
             },
             "require": {
@@ -2047,7 +2048,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-06T14:04:46+00:00"
+            "time": "2019-04-09T10:34:11+00:00"
         },
         {
             "name": "symfony/console",
@@ -2055,12 +2056,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "93d8bd2aa30c6f0614e155dec377c3503b9cba7b"
+                "reference": "47b78954bea981abeccfed88eef3a9a57c15ca4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/93d8bd2aa30c6f0614e155dec377c3503b9cba7b",
-                "reference": "93d8bd2aa30c6f0614e155dec377c3503b9cba7b",
+                "url": "https://api.github.com/repos/symfony/console/zipball/47b78954bea981abeccfed88eef3a9a57c15ca4d",
+                "reference": "47b78954bea981abeccfed88eef3a9a57c15ca4d",
                 "shasum": ""
             },
             "require": {
@@ -2122,7 +2123,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-06T16:39:17+00:00"
+            "time": "2019-04-09T18:49:00+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -2568,6 +2569,47 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2019-04-04T09:56:43+00:00"
+        },
+        {
+            "name": "verot/class.upload.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/verot/class.upload.php.git",
+                "reference": "3d19633c6fe4315a999957741acca56eddddfbed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/verot/class.upload.php/zipball/3d19633c6fe4315a999957741acca56eddddfbed",
+                "reference": "3d19633c6fe4315a999957741acca56eddddfbed",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/class.upload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "Colin Verot",
+                    "email": "colin@verot.net"
+                }
+            ],
+            "description": "This PHP class uploads files and manipulates images very easily.",
+            "homepage": "http://www.verot.net/php_class_upload.htm",
+            "keywords": [
+                "gd",
+                "upload"
+            ],
+            "time": "2018-12-15T00:31:29+00:00"
         },
         {
             "name": "webmozart/assert",
