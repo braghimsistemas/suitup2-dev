@@ -10,14 +10,15 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body style="background-color: rgba(45, 65, 134, 0.2); ">
     <div class="container">
       <h1>
         <a href="<?php echo $this->baseUrl('/'); ?>">
-          ModuleDefault
+          ModuleAdmin
         </a>
       </h1>
-      <h4>Created by SuitUp Manager Version: 1.0.2</h4>
+      <h4>Suitup Framework Version: <?php echo SuitupStart::VERSION; ?></h4>
+      <h5>URL Base: <?php echo $this->baseUrl(); ?></h5>
 
       <?php echo $content; ?>
     </div>
