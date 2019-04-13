@@ -1,10 +1,14 @@
 <?php
 namespace ModuleAdmin\Controllers;
 
+use Suitup\Enum\MsgType;
+
 class ArtistasController extends AbstractController
 {
   public function indexAction() {
-    // Here is where the legends begins...
+    
+    $this->addMsg('Lista de artistas');
+
   }
 }
 

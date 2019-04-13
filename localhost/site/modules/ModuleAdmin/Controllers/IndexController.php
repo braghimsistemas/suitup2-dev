@@ -1,17 +1,16 @@
 <?php
 namespace ModuleAdmin\Controllers;
 
+use Suitup\Enum\MsgType;
+
 class IndexController extends AbstractController
 {
-  /*
-  public function __construct() {
-    echo 'Sai jacare';
-    dump($this);
-  }
-  /**/
-
   public function indexAction() {
-    // Here is where the legends begins...
+
+    $this->addMsg('Redirected. The index/index route does not exists in the system', MsgType::DANGER, true);
+    $this->addMsg('But it\'s everything OK!', MsgType::SUCCESS, true);
+
+    return $this->redirect($this->baseUrl('/artistas'));
   }
 }
 

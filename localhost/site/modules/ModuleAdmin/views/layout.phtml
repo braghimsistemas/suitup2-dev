@@ -8,27 +8,71 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <title>Hello, world!</title>
   </head>
   <body style="background-color: rgba(45, 65, 134, 0.2); ">
     <div class="container">
+
+      <?php if($messages): ?>
+        <div style="position: fixed; top: 30px; right: 30px; z-index: 999;" id="sysMsgs">
+          <?php foreach ($messages as $type => $msgs): ?>
+            <div class="alert <?php echo "alert-$type"; ?>" style="position: relative; width: 350px; margin-bottom: 5px;">
+              <i class="fa fa-times" style="position: absolute; top: 15px; right: 15px; cursor: pointer;"></i>
+              - <?php echo implode('<br/> - ', $msgs); ?>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
+
       <h1>
         <a href="<?php echo $this->baseUrl('/'); ?>">
           ModuleAdmin
         </a>
       </h1>
       <h4>Suitup Framework Version: <?php echo SuitupStart::VERSION; ?></h4>
-      <h5>URL Base: <?php echo $this->baseUrl(); ?></h5>
-
+      
       <?php echo $content; ?>
     </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.0/holder.js"></script>
+    <script type="application/javascript">
+      $(function() {
+        "use strict";
+
+        /*--------------------------
+        System Messages
+        ---------------------------- */
+
+        // Remove a cada x tempo a primeira notificacao
+        var intervalMsgs = null;
+        if ($('#sysMsgs div.alert').length) {
+          intervalMsgs = setInterval(function() {
+            $('#sysMsgs div.alert').first().fadeOut('fast', function() {
+              $(this).remove();
+
+              if ($('#sysMsgs div.alert').length === 0) {
+                $('#sysMsgs').remove();
+                clearInterval(intervalMsgs);
+              }
+            });
+          }, 5000);
+        }
+
+        // Remove msgs ao clicar no icone para fechar
+        $('#sysMsgs div.alert i.fa-times').click(function() {
+          $(this).parent().fadeOut('fast', function() {
+            $(this).remove();
+          });
+        });
+      });
+    </script>
   </body>
 </html>
 
