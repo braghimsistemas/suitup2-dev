@@ -1,7 +1,7 @@
 <?php
 namespace ModuleAdmin\Controllers;
 
-use Suitup\Enum\MsgType;
+use SuitUp\Enum\MsgType;
 
 class ArtistasController extends AbstractController
 {

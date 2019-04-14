@@ -7,7 +7,7 @@
 
 return array(
   'album-detalhe' => array(
-    'type' => \Suitup\Mvc\Routes::TYPE_LINEAR,
+    'type' => \SuitUp\Mvc\Routes::TYPE_LINEAR,
     'controller' => 'album',
     'action' => 'index',
     'params' => array(
@@ -16,7 +16,7 @@ return array(
     )
   ),
   // array(
-  //   'type' => \Suitup\Mvc\Routes::TYPE_LITERAL,
+  //   'type' => \SuitUp\Mvc\Routes::TYPE_LITERAL,
   //   'controller' => 'album',
   //   'action' => 'adicionar',
   //   'url_list' => function() {
@@ -30,7 +30,7 @@ return array(
   //   'params' => array()
   // ),
   // 'album-editar.html' => array(
-  //   'type' => \Suitup\Mvc\Routes::TYPE_REVERSE,
+  //   'type' => \SuitUp\Mvc\Routes::TYPE_REVERSE,
   //   'controller' => 'album',
   //   'action' => 'editar',
   //   'params' => array(

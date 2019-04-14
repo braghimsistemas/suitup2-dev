@@ -1,7 +1,7 @@
 <?php
 namespace ModuleDefault\Controllers;
 
-use Suitup\Enum\MsgType;
+use SuitUp\Enum\MsgType;
 
 class IndexController extends AbstractController
 {
