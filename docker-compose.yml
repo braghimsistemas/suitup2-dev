@@ -3,6 +3,7 @@ services:
   # https://dockerfile.readthedocs.io/en/latest/content/DockerImages/dockerfiles/php-apache.html
   servidor:
     image: webdevops/php-apache:7.2
+    container_name: suitup-apache
     build:
       context: ./docker
     ports:
@@ -17,5 +18,28 @@ services:
       - "PHP_UPLOAD_MAX_FILESIZE=64M"
       - "PHP_POST_MAX_SIZE=64M"
       - "PHP_DISMOD=ioncube,redis"
+
+  # https://github.com/mybb/docker-compose/blob/master/docker-compose.yml.mariadb.example
+  database:
+    image: mariadb:10.4
+    container_name: suitup-mysql
+    depends_on:
+      - servidor
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=142536
+      - MYSQL_DATABASE=suitup
+      - MYSQL_USER=suitup
+      - MYSQL_PASSWORD=123456
+    logging:
+      driver: syslog
+      options:
+        tag: "{{.DaemonName}}(image={{.ImageName}};name={{.Name}};id={{.ID}})"
+    restart: always
+    volumes:
+      - ${PWD}/mariadb:/var/lib/mysql
+      - "./docker/mysql_data:/docker-entrypoint-initdb.d"
+
 volumes:
   data:
