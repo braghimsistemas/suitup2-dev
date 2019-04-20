@@ -4,6 +4,12 @@ services:
   servidor:
     image: webdevops/php-apache:7.2
     container_name: suitup-apache
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    networks:
+      - default
     build:
       context: ./docker
     ports:
@@ -20,18 +26,18 @@ services:
       - "PHP_DISMOD=ioncube,redis"
 
   # https://github.com/mybb/docker-compose/blob/master/docker-compose.yml.mariadb.example
-  database:
+  mysql:
     image: mariadb:10.4
     container_name: suitup-mysql
-    depends_on:
-      - servidor
+    networks:
+      - default
     ports:
-      - 3406:3306
+      - "3406:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=142536
-      - MYSQL_DATABASE=suitup
-      - MYSQL_USER=suitup
-      - MYSQL_PASSWORD=123456
+      - "MYSQL_ROOT_PASSWORD=142536"
+      - "MYSQL_DATABASE=suitup"
+      - "MYSQL_USER=suitup"
+      - "MYSQL_PASSWORD=123456"
     logging:
       driver: syslog
       options:

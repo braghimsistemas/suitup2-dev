@@ -18,4 +18,4 @@ RewriteRule ^(.*)$ %{ENV:BASE}index.php [NC,L]
 
 # Env variables
 #SetEnv DEVELOPMENT true
-SetEnv SHOW_ERRORS true
+#SetEnv SHOW_ERRORS true
