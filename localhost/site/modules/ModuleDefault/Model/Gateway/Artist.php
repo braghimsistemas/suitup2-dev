@@ -5,6 +5,8 @@ use SuitUp\Database\Gateway\AbstractGateway;
 
 class Artist extends AbstractGateway {
 
+  const DELETED = 9;
+
   /**
    * Required. Table name and pk's list
    */
@@ -20,11 +22,11 @@ class Artist extends AbstractGateway {
   protected $onUpdate = array('edited' => 'NOW()');
 
   public function getList() {
-    $query = $this->select("SELECT * FROM {$this->name} a")
-      ->where('a.status = 1')
-      ->order(array('a.name ASC'));
+    $query = $this->select('a.pk_artist, a.name')
+      ->from(array($this->name => 'a'))
+      ->where('a.status <> ?', self::DELETED);
 
-    return $this->db->query($query);
+    return $this->db->fetchPairs($query);
   }
 }
 

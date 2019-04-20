@@ -8,7 +8,7 @@ use SuitUp\Database\Gateway\AbstractGateway;
 class IndexController extends AbstractController
 {
   public function indexAction() {
-    
+
     // Send an example message
     $this->addMsg('A simple message example', MsgType::WARNING);
 
