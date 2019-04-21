@@ -26,7 +26,7 @@ class Artist extends AbstractGateway {
       ->from(array($this->name => 'a'))
       ->where('a.status <> ?', self::DELETED);
 
-    return $this->db->fetchPairs($query);
+    return $this->db->fetchAll($query);
   }
 }
 
