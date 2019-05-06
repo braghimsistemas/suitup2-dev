@@ -4,7 +4,9 @@
     "type": "project",
     "require": {
 				"php": ">=7.2",
-        "braghim-sistemas/suitup-php": "dev-master"
+        "braghim-sistemas/suitup-php": "dev-master",
+				"phpunit/phpunit": "^8.0",
+				"php-coveralls/php-coveralls": "^v2"
     },
     "license": "MIT",
     "authors": [
