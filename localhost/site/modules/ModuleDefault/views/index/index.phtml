@@ -14,4 +14,8 @@
     <?php endforeach; ?>
   <?php endif; ?>
 
+  <div class="col-12">
+    <?php echo $this->paginateControl($artists, 'paginator.phtml'); ?>
+  </div>
+
 </div>

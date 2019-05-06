@@ -25,8 +25,9 @@ class Artist extends AbstractGateway {
     $query = $this->select('a.pk_artist, a.name')
       ->from(array($this->name => 'a'))
       ->where('a.status <> ?', self::DELETED);
+      // ->orWhere('a.name <> :name');
 
-    return $this->db->fetchAll($query);
+    return $this->db->paginate($query);
   }
 }
 

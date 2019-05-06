@@ -1,0 +1,57 @@
+<?php if(count($pages)): ?>
+  <nav aria-label="Navigation pages" class="d-inline-flex">
+    <ul class="pagination mr-2">
+
+      <!-- First page -->
+      <?php if($totalPages > count($pages)): ?>
+        <?php if($currentPage != 1): ?>
+          <li class="page-item"><a href="<?php echo $baseUrl; ?><?php echo $paramName; ?>=1" class="page-link" aria-label="Primeira"><span aria-hidden="true">Primeira</span></a></li>
+        <?php else: ?>
+          <li class="page-item disabled"><a href="javascript:void(0);" class="page-link" aria-label="Primeira"><span aria-hidden="true">Primeira</span></a></li>
+        <?php endif; ?>
+      <?php endif; ?>
+      <!-- /First page -->
+    </ul>
+
+    <ul class="pagination">
+      <!-- Previous -->
+      <?php if($previousPage): ?>
+        <li class="page-item"><a href="<?php echo $baseUrl; ?><?php echo $paramName; ?>=<?php echo $previousPage; ?>" class="page-link" aria-label="Anterior"><span aria-hidden="true">Anterior</span></a></li>
+      <?php else:?>
+        <li class="page-item disabled"><a href="javascript:void(0);" class="page-link" aria-label="Anterior"><span aria-hidden="true">Anterior</span></a></li>
+      <?php endif; ?>
+      <!-- /Previous -->
+
+      <!-- Pages -->
+      <?php foreach($pages as $key => $page): ?>
+        <?php if($page != $currentPage): ?>
+          <li class="page-item"><a href="<?php echo $baseUrl; ?><?php echo $paramName; ?>=<?php echo $page; ?>" class="page-link"><?php echo $page; ?></a></li>
+        <?php else: ?>
+          <li class="page-item active"><a href="javascript:void(0);" class="page-link"><?php echo $page; ?> <span class="sr-only">(atual)</span></a></li>
+        <?php endif; ?>
+      <?php endforeach; ?>
+      <!-- /Pages -->
+
+      <!-- Next -->
+      <?php if($nextPage): ?>
+        <li class="page-item"><a href="<?php echo $baseUrl; ?><?php echo $paramName; ?>=<?php echo $nextPage; ?>" class="page-link" aria-label="Próxima"><span aria-hidden="true">Próxima</span></a></li>
+      <?php else:?>
+        <li class="page-item disabled"><a href="javascript:void(0);" class="page-link" aria-label="Próxima"><span aria-hidden="true">Próxima</span></a></li>
+      <?php endif; ?>
+      <!-- /Next -->
+    </ul>
+
+    <ul class="pagination ml-2">
+      <!-- Last page -->
+      <?php if($totalPages > count($pages)): ?>
+        <?php if($currentPage != $totalPages): ?>
+          <li class="page-item"><a href="<?php echo $baseUrl; ?><?php echo $paramName; ?>=<?php echo $totalPages; ?>" class="page-link" aria-label="Última"><span aria-hidden="true">Última</span></a></li>
+        <?php else: ?>
+          <li class="page-item disabled"><a href="javascript:void(0);" class="page-link" aria-label="Última"><span aria-hidden="true">Última</span></a></li>
+        <?php endif; ?>
+      <?php endif; ?>
+      <!-- /Last page -->
+
+    </ul>
+  </nav>
+<?php endif; ?>

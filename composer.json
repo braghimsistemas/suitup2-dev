@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
 				"php": ">=7.2",
-        "braghim-sistemas/suitup-php": "dev-version2.0"
+        "braghim-sistemas/suitup-php": "dev-master"
     },
     "license": "MIT",
     "authors": [
