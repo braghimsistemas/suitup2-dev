@@ -1,6 +1,7 @@
 # Suitup 2 Development Environment
 
-This is the recommended environment to develop Suitup and its components.
+This is the recommended environment to develop [Suitup PHP Framework](https://suitupframework.com)
+and its components.
 
 ## Install
 
