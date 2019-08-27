@@ -20,6 +20,6 @@ This is the recommended environment to develop Suitup and its components.
 
 `$ cd vendor/braghim-sistemas/suitup-php/`
 
-Everything edited here will be available to be commited to production.
+Everything edited here will be available to be committed to production.
 Please don't try to push direct on `master` branch, create a new branch
 and make a pull request instead.
